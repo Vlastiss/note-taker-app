@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Note taker</title>
+  </head>
+  <body>
+    <h1>Note Taker</h1>
+    <h2>Add a new node</h2>
+    <div class="input">
+      <p class="note">note:</p>
+      <textarea placeholder="Write your note here..." class="box"></textarea>
+    </div>
+    <button class="add-btn" onclick="addNote()">Add Note</button>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Note 1</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
+              aspernatur?
+            </td>
+            <tr>
+              <td>
+                <button onclick="viewDetail()">view detail</button>
+              </td>
+            </tr>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
