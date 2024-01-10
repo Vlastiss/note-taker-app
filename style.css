@@ -34,7 +34,8 @@ h2{
   font-size: 1.2rem;
   padding: 5px;
   border: 1px solid rgba(128, 128, 128, 0.542);
-  border-radius: 15px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.586);
 }
 .box:active {
   content: '';
@@ -50,7 +51,7 @@ h2{
   background: rgba(133, 133, 250, 0.592);
 }
 table{
-  border: 1px solid black;
+  border: 1px solid  rgba(255, 255, 255, 0.586);;
   border-radius: 5px;
   display: inline-block;
   width: 49%;
