@@ -7,7 +7,7 @@
 }
 body {
   background: linear-gradient(70deg, #caf17c, #9d7146);
-  padding: 0 30px;
+  padding: 0 100px;
 }
 h1,h2 {
   text-align: center;
@@ -17,10 +17,9 @@ h2{
   color: green;
   margin-bottom: -15px;
 }
+
 .input {
   width: 100%;
-  max-width: 600px;
-  /* border: 1px solid black; */
   margin: 30px auto;
   display: flex;
   height: 10vh;
@@ -37,9 +36,10 @@ h2{
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.586);
 }
-.box:active {
+.box:focus {
   content: '';
-  border: 3px solid rgba(173, 216, 230, 0.561);
+  outline: none;
+  border: 3px solid rgba(114, 220, 255, 0.861);
 }
 .add-btn {
   display: block;
