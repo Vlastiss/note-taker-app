@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 body {
-  background: linear-gradient(70deg, #caf17c, #9d7146);
+  background: rgba(125, 122, 150, 0.362);
   padding: 0 100px;
 }
 h1,h2 {
