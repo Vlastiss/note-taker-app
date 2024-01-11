@@ -1,31 +1,10 @@
-
-// function addNote() {
-// const noNotes = document.getElementById('noNotes');
-// const textArrea = document.getElementById('text').value;
-// noNotes.style.visibility = "hidden";
-
-//   if (textArrea.trim() !== '') {
-//     const tableBody = document.querySelector('#myTable tbody')
-
-//     const newRow = tableBody.insertRow();
-//     const newCell1 = newRow.insertCell(0);
-//     const newCell2 = newRow.insertCell(1);
-
-//     newCell1.textContent = 'Note' + noteCounter;
-//     newCell2.textContent = textArrea;
-
-//     noteCounter++;
-//     document.getElementById('text').value = '';
-//   } else {
-//     alert("please enter your note")
-//   }
-// }
-
 let noteCounter = 1; // Initialize the note counter
 
 function addNote() {
+  const textArrea = document.getElementById('text');
+  const textAreaValue = textArrea.value;
+  const truncatedTextArrea = textAreaValue.length > 30 ? textAreaValue.substring(0, 30) + "..." : textAreaValue;
 
-  const textArrea = document.getElementById('text').value;
   const noNotes = document.getElementById('noNotes');
   noNotes.style.visibility = "hidden";
 
@@ -47,10 +26,12 @@ function addNote() {
   const bodyRow2 = document.createElement('tr');
   const bodyCell2 = document.createElement('td');
   const viewDetailButton = document.createElement('button');
-  viewDetailButton.textContent = 'View detail';
-  viewDetailButton.setAttribute("onclick", 'viewDetail()');
 
-  bodyCell1.textContent = textArrea;
+  viewDetailButton.textContent = 'View detail';
+  viewDetailButton.setAttribute("onclick", `viewDetail("${textAreaValue}")`);
+
+
+  bodyCell1.textContent = truncatedTextArrea;
   bodyCell2.appendChild(viewDetailButton);
   bodyRow1.appendChild(bodyCell1);
   tbody.appendChild(bodyRow1);
@@ -67,4 +48,19 @@ function addNote() {
   // Increment the note counter for the next note
   noteCounter++;
   document.getElementById('text').value = '';
+}
+
+function viewDetail(noteContent) {
+  // const noteContent = document.getElementById('text').value;
+
+  document.getElementById('modalContent').textContent = noteContent;
+
+  document.getElementById('modal').style.display = 'block';
+  document.getElementById('overlay').style.display = 'block';
+};
+
+function closeModal() {
+  document.getElementById('modal').style.display = 'none';
+  document.getElementById('overlay').style.display = 'none';
+
 }
